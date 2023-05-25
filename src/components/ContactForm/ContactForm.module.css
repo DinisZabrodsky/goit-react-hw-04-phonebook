@@ -1,0 +1,19 @@
+.form {
+    display: flex;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+
+    gap: 15px;
+
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.form label {
+    display: block;
+    width: 211px;
+}
+
+.form input {
+    width: 100%;
+}
