@@ -7,6 +7,7 @@ import { ContactList } from "./ContactList/ContactList";
 import cssPhone from "./Phonebook.module.css";
 
 export function App () {
+
     const [contacts, setContacts] = useState([
         {id: 'id-1', name: 'Rosie Simpson', number: '459-12-56'},
         {id: 'id-2', name: 'Hermione Kline', number: '443-89-12'},
@@ -53,10 +54,8 @@ export function App () {
         setFilterEL(value)
     }
 
-    function getContacts () {
-        if(filterEl !== ""){
-            return contacts.filter(contact => contact.name.toLowerCase().includes(filterEl.toLowerCase()))
-        }
+    const getContacts = () => {
+        contacts.filter(contact => contact.name.toLowerCase().includes(filterEl.toLowerCase()))
     }
 
     const deleteContact = (e) => {
