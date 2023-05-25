@@ -55,7 +55,7 @@ export function App () {
     }
 
     const getContacts = () => {
-        contacts.filter(contact => contact.name.toLowerCase().includes(filterEl.toLowerCase()))
+        return contacts.filter(contact => contact.name.toLowerCase().includes(filterEl.toLowerCase()))
     }
 
     const deleteContact = (e) => {
