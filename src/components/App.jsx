@@ -21,7 +21,7 @@ export function App () {
     useEffect(() => {
         const localData = localStorage.getItem('localContact')
         if(localData) {
-            setContacts({contacts: JSON.parse(localData)})
+            setContacts(JSON.parse(localData))
         }
     },[])
 
@@ -55,7 +55,7 @@ export function App () {
     }
 
     const getContacts = () => {
-        return contacts.filter(contact => contact.name.toLowerCase().includes(filterEl.toLowerCase()))
+        return contacts.filter((contact) => contact.name.toLowerCase().includes(filterEl.toLowerCase()))
     }
 
     const deleteContact = (e) => {
